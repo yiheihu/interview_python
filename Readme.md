@@ -256,10 +256,23 @@ print Person.name  # [1]
 ## 6 字典推导式
 
 可能你见过列表推导时,却没有见过字典推导式,在2.7中才加入的:
-
+me：iterable表示可以遍历的序列
 ```python
 d = {key: value for (key, value) in iterable}
 ```
+me：找到两种用法
+```python
+strings = ['import','is','with','if','file','exception']
+D = {key: val for val,key in enumerate(strings)}
+print(D)
+{'exception': 5, 'is': 1, 'file': 4, 'import': 0, 'with': 2, 'if': 3}
+
+mca={"a":1, "b":2, "c":3, "d":4}
+dicts={v:k for k,v in mca.items()}
+print dicts
+{1: 'a', 2: 'b', 3: 'c', 4: 'd'}
+```
+
 
 ## 7 Python中单下划线和双下划线
 
